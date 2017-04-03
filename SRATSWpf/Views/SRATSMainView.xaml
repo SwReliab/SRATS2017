@@ -1,0 +1,110 @@
+﻿<Window x:Class="SRATS2017AddIn.Views.SRATSMainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="SRATS Main" Height="550" Width="500">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Data" Margin="5,5,5,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                    <Label Content="Range" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Data.DataRange}" Width="200" Margin="5" VerticalAlignment="Center"/>
+                </StackPanel>
+                <GroupBox Grid.Row="1" Header="Data Type">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Content="Cumulative Time" HorizontalAlignment="Left" Margin="10,0,20,0" VerticalAlignment="Center" IsChecked="{Binding Cumulative}"/>
+                        <RadioButton Content="Time interval" HorizontalAlignment="Left" Margin="20,0,10,0" VerticalAlignment="Center" IsChecked="{Binding TimeInterval}"/>
+                    </StackPanel>
+                </GroupBox>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Content="Total" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" IsReadOnly="True" Width="50" Height="20"  VerticalAlignment="Center" Text="{Binding Data.Total, Mode=OneWay}"/>
+                    <Label Grid.Column="2" Grid.Row="0" Content="Mean" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="3" Grid.Row="0" IsReadOnly="True" Width="50"  Height="20"  VerticalAlignment="Center" Text="{Binding Data.Mean, Mode=OneWay}"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Min" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" IsReadOnly="True" Width="50"  Height="20"  VerticalAlignment="Center" Text="{Binding Data.Min, Mode=OneWay}"/>
+                    <Label Grid.Column="2" Grid.Row="1" Content="Max" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="3" Grid.Row="1" IsReadOnly="True" Width="50"  Height="20"  VerticalAlignment="Center" Text="{Binding Data.Max, Mode=OneWay}"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Column="1" Grid.Row="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Button Height="25" Width="80" Margin="5" Content="Estimate" Command="{Binding EstimateCommand}"/>
+                <Button Height="25" Width="80" Margin="5" Content="Initialize" Command="{Binding InitializeCommand}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Button Height="25" Width="80" Margin="5" Content="Models..." Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+        <ListView Name="modellist" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding ModelList}">
+            <ListView.Resources>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <EventSetter Event="MouseDoubleClick" Handler="ListView_MouseDoubleClick"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="Auto">
+                            <GridViewColumnHeader Tag="Name" Content="Name" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Llf, StringFormat={}{0:f2}}" Width="Auto">
+                            <GridViewColumnHeader Tag="Llf" Content="LLF" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Df}" Width="Auto">
+                            <GridViewColumnHeader Tag="Df" Content="DF" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Aic, StringFormat={}{0:f2}}" Width="Auto">
+                            <GridViewColumnHeader Tag="Aic" Content="AIC" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Bic, StringFormat={}{0:f2}}" Width="Auto">
+                            <GridViewColumnHeader Tag="Bic" Content="BIC" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Mse, StringFormat={}{0:f2}}" Width="Auto">
+                            <GridViewColumnHeader Tag="Mse" Content="MSE" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Status}" Width="Auto">
+                            <GridViewColumnHeader Tag="Status" Content="Status" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding IterString}" Width="Auto">
+                            <GridViewColumnHeader Tag="Iter" Content="Iteration" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ParamString}" Width="Auto">
+                            <GridViewColumnHeader Tag="Param" Content="Parameter" Click="GridViewColumnHeader_Click"/>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

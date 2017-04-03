@@ -75,6 +75,5 @@
     <Compile Include="Commons\MTTFValue.cs" />
     <Compile Include="Data\GraphData.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

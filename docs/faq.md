@@ -23,7 +23,7 @@ A. コードはMITライセンスにもとづいています．つまり下記�
 
 Q. モデルの詳細はありませんか？
 
-A. [こちら](https://github.com/SwReliab/SRATS2017/blob/master/docs/pdfs/srats_model.pdf)を参照してください．
+A. [こちら](pdfs/srats_model.pdf) を参照してください．
 
 ---
 

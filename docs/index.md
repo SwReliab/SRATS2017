@@ -28,7 +28,7 @@ SRATS, SRATS2010, SRATS2017 の機能的な特徴を以下に列挙します．
 
 ### 更新履歴
 
-- 2017/5/26 電子情報通信学会信頼性研究会でSRATS2017を発表（[論文](pdfs/ieice20170526.pdf)）
+- 2017/5/26 電子情報通信学会信頼性研究会でSRATS2017を発表（[論文](https://github.com/SwReliab/SRATS2017/blob/master/docs/pdfs/ieice20170526.pdf)）
 
 ### SRATS2017における新機能
 
@@ -60,7 +60,7 @@ SRATS2017 ではSRATS2010でも扱っていた以下の11種類の基本ソフ�
 
 各モデルの詳細は以下の PDF ファイルを参照して下さい．
 
-[PDFファイル](pdfs/models.pdf)
+[PDFファイル](https://github.com/SwReliab/SRATS2017/blob/master/docs/pdfs/srats_model.pdf)
 
 ### ライセンス
 

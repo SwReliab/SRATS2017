@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ page.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Hiroyuki Okamura" />
+<meta name="description" content="">
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="software reliability, software reliability growth models, spreadsheet software" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/slide.css">
+<link rel="alternate stylesheet" href="{{ site.baseurl }}/css/change.css" title="change">
+<script src="{{ site.baseurl }}/js/openclose.js"></script>
+<script src="{{ site.baseurl }}/js/fixmenu_pagetop.js"></script>
+<script src="{{ site.baseurl }}/js/styleswitcher.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<style>
+.slide1,.slide2,.slide3 {display:none;}
+#mainimg {position: absolute;}
+</style>
+<![endif]-->
+</head>
+
+<body class="home">
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/img/logo.png" alt="SRATS2017"></a></h1>
+<ul id="headermenu">
+  <li><a href="https://github.com/SwReliab/SRATS2017">GitHub</a></li>
+  <li><a href="https://github.com/SwReliab">Other Software Reliability Tools</a></li>
+</ul>
+<!--文字サイズ変更ボタン-->
+<!-- <div id="fsize">
+<p>文字サイズ</p>
+<ul>
+<li id="small"><a href="#" onclick="setActiveStyleSheet('default'); return false;" title="文字サイズ「小」"></a></li>
+<li id="large"><a href="#" onclick="setActiveStyleSheet('change'); return false;" title="文字サイズ「大」"></a></li>
+</ul>
+</div> -->
+</header>
+
+<!--スライドショー-->
+<!-- <aside id="mainimg">
+<img src="img/scr4.png" alt="" class="slide0">
+</aside> -->
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+  <li class="current"><a href="{{ site.baseurl }}/index.html">SRATS<span>SRATS</span></a></li>
+  <li><a href="{{ site.baseurl }}/introduction.html">背景と要件<span>Background</span></a></li>
+  <li><a href="{{ site.baseurl }}/design.html">設計概要<span>Design</span></a></li>
+  <li><a href="{{ site.baseurl }}/install.html">ダウンロードとインストール<span>Download &amp; Instration</span></a></li>
+  <li><a href="{{ site.baseurl }}/usage.html">利用方法<span>Usage</span></a></li>
+  <li><a href="{{ site.baseurl }}/example.html">利用例<span>Example</span></a></li>
+  <li><a href="{{ site.baseurl }}/softreliab.html">ソフトウェア信頼性モデル<span>SRGM</span></a></li>
+  <li><a href="{{ site.baseurl }}/glossary.html">用語<span>Glossary</span></a></li>
+  <li><a href="{{ site.baseurl }}/faq.html">よくある質問<span>FAQ</span></a></li>
+  </ul>
+  </nav>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+  <ul>
+    <li class="current"><a href="{{ site.baseurl }}/index.html">SRATS<span>SRATS</span></a></li>
+    <li><a href="{{ site.baseurl }}/introduction.html">背景と要件<span>Background</span></a></li>
+    <li><a href="{{ site.baseurl }}/design.html">設計概要<span>Design</span></a></li>
+    <li><a href="{{ site.baseurl }}/install.html">インストール<span>Instration</span></a></li>
+    <li><a href="{{ site.baseurl }}/usage.html">利用方法<span>Usage</span></a></li>
+    <li><a href="{{ site.baseurl }}/example.html">利用例<span>Example</span></a></li>
+    <li><a href="{{ site.baseurl }}/softreliab.html">ソフトウェア信頼性モデル<span>SRGM</span></a></li>
+    <li><a href="{{ site.baseurl }}/glossary.html">用語<span>Glossary</span></a></li>
+    <li><a href="{{ site.baseurl }}/faq.html">よくある質問<span>FAQ</span></a></li>
+    </ul>
+  </nav>
+
+<div id="contents">
+ <section>
+	{{ content }}
+</section>
+<!--/footermenu-->
+
+<div id="copyright">
+  <small>Copyright&copy; <a href="index.html">SRATS</a> All Rights Reserved.</small>
+  <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+  </div>
+  
+  </footer>
+  
+  <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+  
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+  if (OCwindowWidth() <= 800) {
+    open_close("menubar_hdr", "menubar-s");
+  }
+  </script>
+  
+  </body>
+  </html>
+  

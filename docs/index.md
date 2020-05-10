@@ -70,7 +70,7 @@ SRATS2017 ではSRATS2010でも扱っていた以下の11種類の基本ソフ�
 
 本ソフトウェアは以下の研究成果にもとづいています．
 
-1. 岡村寛之, 渡部保博，土肥正, 尾崎俊治, EM アルゴリズムに基づいたソフトウェア信頼性モデルの推定”, 電子情報通信学会論文誌 (A), vol. J85-A, no. 4, pp. 442-450, 2002.
+1. 岡村寛之, 渡部保博，土肥正, 尾崎俊治, EM アルゴリズムに基づいたソフトウェア信頼性モデルの推定”, 電子情報通信学会論文誌 (A), J85-A:442-450, 2002.
 1. H. Okamura, Y. Watanabe and T. Dohi, Estimating mixed software reliability models based on the EM algorithms, Proceedings of 2002 International Symposium on Empirical Software Engineering (ISESE 2002), 69-78, IEEE CPS, 2002.
 1. H. Okamura, T. Watanabe and T. Dohi, An iterative scheme for maximum likelihood estimation in software reliability modeling, Proceedings of 14th International Symposium on Software Reliability Engineering (ISSRE 2003), 479-490, IEEE CPS, 2003.
 1. H. Okamura, T. Dohi and S. Osaki, EM algorithms for logistic software reliability models, Proceedings of 22nd IASTED International Conference on Software Engineering, 263-268, ACTA Press, 2004.
@@ -78,7 +78,7 @@ SRATS2017 ではSRATS2010でも扱っていた以下の11種類の基本ソフ�
 1. 岡村寛之，安藤光昭，土肥正, 一般化ガンマソフトウェア信頼性モデル, 電子情報通信学会論文誌 (D-I), J87-D-I:805-814, 2004.
 1. H. Okamura and T. Dohi, Building phase-type software reliability models, Proceedings of The 17th International Symposium on Software Reliability Engineering (ISSRE 2006), 289-298, IEEE CPS, 2006.
 1. H. Okamura and T. Dohi, Hyper-Erlang software reliability model, Proceedings of 14th Pacific Rim International Symposium on Dependable Computing (PRDC 2008), 232-239, IEEE CPS, 2008.
-1. K. Ohishi, H. Okamura and T. Dohi, Gompertz software reliability model: estimation algorithm and empirical validation, Journal of Systems and Software, vol. 82, 535-543, 2009.
+1. K. Ohishi, H. Okamura and T. Dohi, Gompertz software reliability model: estimation algorithm and empirical validation, Journal of Systems and Software, 82:535-543, 2009.
 1. H. Okamura, T. Dohi and S. Osaki, Software reliability growth models with normal failure time distributions, Reliability Engineering and System Safety, 116:135-141, 2013.
 1. H. Okamura and T. Dohi, SRATS: Software reliability assessment tool on spreadsheet (experience report), Proceedings of the 24th International Symposium on Software Reliability Engineering (ISSRE 2013), 100-117, IEEE CPS, 2013.
 1. H. Okamura and T. Dohi, Phase-type software reliability model: Parameter estimation algorithms with grouped data, Annals of Operations Research, 244:177-208, 2016.

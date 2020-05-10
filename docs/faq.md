@@ -74,4 +74,4 @@ A. 位相型分布と言うのはどのような分布でも高い精度で近�
 
 Q. CanonicalPHとHyperErlangの違いは？どちらが良いの？
 
-A. 位相型分布は位相数と位相構造で特徴付けられます．位相構造とは位相間を推移する
+A. 位相型分布は位相数と位相構造で特徴付けられます．位相構造とは位相推移の順番などを決定するものです．CanonicalPHとHyperErlangは位相構造が違います．理論的にはCanonicalPHで全てのHyperErlangを表現することができるので，CanonicalPHだけで十分なのですが，分散が大きい分布を表現する際にはHyperErlangの方が優れているのでCanonicalPHとHyperErlangをどちらも利用するようにしています．

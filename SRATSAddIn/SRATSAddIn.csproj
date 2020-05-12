@@ -37,10 +37,10 @@
     <OldToolsVersion>15.0</OldToolsVersion>
     <VSTO_TrustAssembliesLocation>true</VSTO_TrustAssembliesLocation>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>C:\Users\okamu\Source\Repos\SRATS2017\installer\</PublishUrl>
+    <PublishUrl>C:\Users\okamu\Documents\SRATS2017\docs\installer\</PublishUrl>
     <InstallUrl>https://swreliab.github.io/SRATS2017/installer/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
     <AutoIncrementApplicationRevision>false</AutoIncrementApplicationRevision>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -253,10 +253,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SRATSAddIn_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DDA921AEE24239A52967FCFF1348C4D4BDAD940E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>439FB302C021A136A10410F1A2B6A008B8DC0746</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

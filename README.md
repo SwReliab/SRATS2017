@@ -1,2 +1,5 @@
-# SRATS
-Library for Estimating Software Reliability Models (C#)
+# SRATS: Software Reliability Assessment Tools on Spreadsheet
+
+
+Japanese: https://swreliab.github.io/SRATS2017/
+

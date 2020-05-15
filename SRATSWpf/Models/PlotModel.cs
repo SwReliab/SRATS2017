@@ -1,4 +1,4 @@
-﻿using SRATS;
+using SRATS;
 using SRATS2017AddIn.Commons;
 using System.Collections.Generic;
 

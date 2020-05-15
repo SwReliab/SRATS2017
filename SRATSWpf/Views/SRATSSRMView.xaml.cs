@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +40,15 @@ namespace SRATS2017AddIn.Views
             SRATSReportView window = new SRATSReportView(new SRATSReportViewModel(vm.Model, vm.Data));
             window.Owner = this;
             window.ShowDialog();
+        }
+
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            if (null != Owner)
+            {
+                Owner.Activate();
+            }
         }
     }
 }

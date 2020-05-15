@@ -1,4 +1,4 @@
-﻿using SRATS2017AddIn.ViewModels;
+using SRATS2017AddIn.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

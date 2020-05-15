@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SRATS;
 using System.Collections.ObjectModel;
 using SRATS2017AddIn.Commons;
@@ -64,17 +64,15 @@ namespace SRATS2017AddIn.Models
                     ObservableCollection<PlotPoint> list = new ObservableCollection<PlotPoint>();
                     double c = 0;
                     double t = 0;
-                    for (int i=0; i<data.Size; i++)
+                    for (int i = 0; i < data.Size; i++)
                     {
                         t += data.Time[i];
-                        if (data.Fault[i] + data.Type[i] != 0)
-                        {
-                            c += data.Fault[i] + data.Type[i];
-                            list.Add(new PlotPoint(t, c));
-                        }
+                        c += data.Fault[i] + data.Type[i];
+                        list.Add(new PlotPoint(t, c));
                     }
                     return list;
-                } else
+                }
+                else
                 {
                     return new ObservableCollection<PlotPoint>();
                 }
@@ -107,7 +105,8 @@ namespace SRATS2017AddIn.Models
                 if (value == true)
                 {
                     type = DataType.Cumulative;
-                } else
+                }
+                else
                 {
                     type = DataType.TimeInterval;
                 }
@@ -240,7 +239,7 @@ namespace SRATS2017AddIn.Models
                 double tmp = System.Convert.ToDouble(dataCells[j, 1]);
                 if (cumulative)
                 {
-                    time[i] =  tmp - prev;
+                    time[i] = tmp - prev;
                     prev = tmp;
                 }
                 else

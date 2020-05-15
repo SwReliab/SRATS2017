@@ -1,4 +1,4 @@
-﻿using SRATS2017AddIn.Commons;
+using SRATS2017AddIn.Commons;
 using SRATS2017AddIn.Models;
 using System.Windows;
 

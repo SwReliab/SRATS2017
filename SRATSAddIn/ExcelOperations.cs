@@ -1,4 +1,4 @@
-﻿using Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
 using SRATS2017AddIn.Commons;
 using System;
 using SRATS2017AddIn.Models;
@@ -30,11 +30,11 @@ namespace SRATSAddIn
                     break;
                 }
             }
-//            Range range = objSheet.get_Range(rangeText, System.Reflection.Missing.Value);
+            //            Range range = objSheet.get_Range(rangeText, System.Reflection.Missing.Value);
             Range range = objSheet.Range[rangeText];
-//            Object[,] dataCells;
+            //            Object[,] dataCells;
             return range.get_Value(System.Reflection.Missing.Value) as Object[,];
-//            return range;
+            //            return range;
         }
 
         private Range SetFaultData(Worksheet objSheet, Range range, double[] mtime, int[] mfault, int[] mtype)
@@ -49,12 +49,9 @@ namespace SRATSAddIn
                 ctime += mtime[k];
                 double v = mfault[k] + mtype[k];
                 cfaults += v;
-                if (v != 0.0)
-                {
-                    range.Cells[1 + i, 1] = ctime;
-                    range.Cells[1 + i, 2] = cfaults;
-                    i++;
-                }
+                range.Cells[1 + i, 1] = ctime;
+                range.Cells[1 + i, 2] = cfaults;
+                i++;
             }
             return objSheet.Range[range.Cells[1, 1], range.Cells[i, 2]];
         }
@@ -86,7 +83,7 @@ namespace SRATSAddIn
             ChartObject chartObj = charts.Add(100, 300, 500, 300);
             Chart chart = chartObj.Chart;
 
-//            chartRange.Columns
+            //            chartRange.Columns
             // Gets the cells that define the bounds of the data to be charted.
             chart.ChartType = XlChartType.xlXYScatter;
             chart.SetSourceData(chartRange.Columns, XlRowCol.xlColumns);
@@ -215,7 +212,7 @@ namespace SRATSAddIn
 
         public override void MakeReport(PlotModel Model)
         {
-            string sheetName;
+            string sheetName = "hoge";
 
             Workbook objBook = Globals.ThisAddIn.Application.ActiveWorkbook;
             Worksheet objSheet;
@@ -246,7 +243,7 @@ namespace SRATSAddIn
             objSheet = Globals.ThisAddIn.Application.ActiveSheet as Worksheet;
             objSheet.Name = sheetName + " (graph)";
 
-//            GraphData graph = Model.SRM.graphData(Model.PlotMVFX, Model.PlotReliX);
+            //            GraphData graph = Model.SRM.graphData(Model.PlotMVFX, Model.PlotReliX);
 
             // data generation
             if (Model.IsIntensity == true)

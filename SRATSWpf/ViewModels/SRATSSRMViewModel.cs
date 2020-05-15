@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using SRATS2017AddIn.Models;
 using SRATS2017AddIn.Commons;
 using SRATS2017AddIn.ViewModels;

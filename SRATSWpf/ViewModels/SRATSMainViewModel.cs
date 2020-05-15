@@ -1,4 +1,4 @@
-﻿using SRATS;
+using SRATS;
 using SRATS.Utils;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
